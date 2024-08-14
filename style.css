@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --square-size: 48px;
+  --grid-size: 16;
+}
+
+#main-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: calc(var(--square-size) * var(--grid-size));
+}
+
+.square {
+  width: var(--square-size);
+  height: var(--square-size);
+  background-color: azure;
+  border: 1px solid aqua;
+}
