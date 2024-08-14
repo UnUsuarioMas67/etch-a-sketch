@@ -20,4 +20,11 @@
   height: var(--square-size);
   background-color: azure;
   border: 1px solid aqua;
+
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.square.hovered {
+  background-color: lightpink;
+  border-color: crimson;
 }
