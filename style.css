@@ -8,6 +8,11 @@
   --canvas-size: 720px;
 }
 
+#new-grid-btn {
+  margin: 1rem 0 1rem;
+  padding: 1rem;
+}
+
 #main-container {
   display: flex;
   flex-wrap: wrap;
