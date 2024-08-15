@@ -5,19 +5,18 @@
 }
 
 :root {
-  --square-size: 48px;
-  --grid-size: 16;
+  --canvas-size: 720px;
 }
 
 #main-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: calc(var(--square-size) * var(--grid-size));
+  width: var(--canvas-size);
+  height: var(--canvas-size);
 }
 
 .square {
-  width: var(--square-size);
-  height: var(--square-size);
+  flex: 0 0 auto;
   background-color: azure;
   border: 1px solid aqua;
 
