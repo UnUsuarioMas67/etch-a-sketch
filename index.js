@@ -12,19 +12,20 @@ newGridBtn.onclick = () => {
       createGrid(gridSize);
     }
   }
-}
+};
 
 createGrid(16);
 
 function createGrid(gridSize) {
   if (gridSize < 1 || gridSize > 100) {
-    throw new RangeError
+    throw new RangeError();
   }
 
   mainContainer.textContent = "";
 
-  const containerWidth = getComputedStyle(mainContainer).getPropertyValue("width");
-  const squareSize = `calc(${containerWidth} / ${gridSize})`
+  const containerWidth =
+    getComputedStyle(mainContainer).getPropertyValue("width");
+  const squareSize = `calc(${containerWidth} / ${gridSize})`;
 
   for (let i = 0; i < gridSize; i++) {
     for (let j = 0; j < gridSize; j++) {
@@ -36,5 +37,5 @@ function createGrid(gridSize) {
 
       mainContainer.appendChild(div);
     }
-  }   
+  }
 }
