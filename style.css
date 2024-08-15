@@ -23,6 +23,7 @@ body {
   flex-wrap: wrap;
   width: var(--canvas-size);
   height: var(--canvas-size);
+  background-color: black;
 }
 
 .square {
