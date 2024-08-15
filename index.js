@@ -8,7 +8,7 @@ newGridBtn.onclick = () => {
   while (!isWithinLimits()) {
     gridSize = parseInt(prompt("Enter the size for the new grid. (Min 1, Max 100)"));
   }
-  
+
   createGrid(gridSize);
 };
 
@@ -34,9 +34,19 @@ function createGrid(gridSize) {
       div.className = "square";
       div.style.width = squareSize;
       div.style.height = squareSize;
-      div.onmouseover = () => div.classList.add("hovered");
+      div.onmouseover = () => updateSquareColor(div);
 
       mainContainer.appendChild(div);
     }
   }
+}
+
+function updateSquareColor(square) {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  const opacity = getComputedStyle(square).getPropertyValue("opacity")
+
+  square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  square.style.opacity = opacity - 0.1;
 }
