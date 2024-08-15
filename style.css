@@ -8,6 +8,11 @@
   --canvas-size: 720px;
 }
 
+body {
+  display: grid;
+  place-items: center;
+}
+
 #new-grid-btn {
   margin: 1rem 0 1rem;
   padding: 1rem;
