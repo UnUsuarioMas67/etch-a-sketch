@@ -7,11 +7,9 @@ newGridBtn.onclick = () => {
 
   while (!isWithinLimits()) {
     gridSize = parseInt(prompt("Enter the size for the new grid. (Min 1, Max 100)"));
-
-    if (isWithinLimits()) {
-      createGrid(gridSize);
-    }
   }
+  
+  createGrid(gridSize);
 };
 
 createGrid(16);
