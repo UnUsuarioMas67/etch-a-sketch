@@ -6,7 +6,7 @@ newGridBtn.onclick = () => {
   const isWithinLimits = () => gridSize > 0 && gridSize <= 100;
 
   while (!isWithinLimits()) {
-    gridSize = prompt("Enter the size for the new grid. (Min 1, Max 100)");
+    gridSize = parseInt(prompt("Enter the size for the new grid. (Min 1, Max 100)"));
 
     if (isWithinLimits()) {
       createGrid(gridSize);
@@ -19,6 +19,9 @@ createGrid(16);
 function createGrid(gridSize) {
   if (gridSize < 1 || gridSize > 100) {
     throw new RangeError();
+  }
+  if (!Number.isInteger(gridSize)) {
+    throw new TypeError();
   }
 
   mainContainer.textContent = "";
